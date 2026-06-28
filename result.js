@@ -53,11 +53,11 @@ document.getElementById("lonelinessLevel").innerText =
     `${lonelinessLevel.text} - ${lonelinessPercent}%`;
 
 // ================= C I U (MXH) =================
-let socialPercent = Math.round((socialScore / 50) * 100);
+let socialPercent = Math.round((socialScore / 60) * 100);
 let socialLevel = getLevel(socialPercent);
 
 document.getElementById("socialScore").innerText =
-    `Điểm: ${socialScore}/50`;
+    `Điểm: ${socialScore}/60`;
 
 animateBar(
     document.getElementById("socialBar"),
@@ -95,3 +95,29 @@ else{
 
 // hiển thị lời khuyên
 document.getElementById("advice").innerText = advice;
+
+// ================= FOOTER ANIMATION =================
+
+function animateFooter(){
+
+const footer = document.querySelector(".footer");
+
+    if(!footer) return;
+
+    const footerTop = footer.getBoundingClientRect().top;
+
+    const windowHeight = window.innerHeight;
+
+    if(footerTop < windowHeight - 100){
+
+        footer.classList.add("show");
+
+    }
+
+}
+
+window.addEventListener("load", animateFooter);
+
+window.addEventListener("scroll", animateFooter);
+
+window.addEventListener("resize", animateFooter);

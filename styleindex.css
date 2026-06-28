@@ -46,15 +46,15 @@ body{
 
     margin:15px auto;
 
-    background:
-    linear-gradient(
+background:
+linear-gradient(
         135deg,
         #166534,
         #15803d
     );
 
-    display:flex;
-    align-items:center;
+display:flex;
+align-items:center;
 
     gap:20px;
 
@@ -74,7 +74,7 @@ body{
 
 .header:hover{
 
-    box-shadow:
+box-shadow:
     0 15px 40px rgba(0,0,0,0.35),
     0 0 30px rgba(34,197,94,0.25);
 
@@ -88,15 +88,15 @@ body{
 
 .logo img{
 
-    width:55px;
-    height:55px;
+width:55px;
+height:55px;
 
-    border-radius:50%;
+border-radius:50%;
 
     border:
     2px solid rgba(255,255,255,0.4);
 
-    box-shadow:
+box-shadow:
     0 0 15px rgba(255,255,255,0.25);
 }
 
@@ -774,4 +774,136 @@ font-size:14px;
     margin-top:5px;
 
     font-style:italic;
+}
+
+/* ===========================
+   MOBILE FIX - INDEX PAGE
+   (ADD ONLY - NO DESKTOP TOUCH)
+=========================== */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* HEADER */
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 12px 14px;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .header-text h2 {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .header-text p {
+        font-size: 12px;
+    }
+
+    /* HERO */
+    .overlay-card {
+        margin: 30px 12px;
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .overlay-card h1 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .info-box {
+        gap: 10px;
+    }
+
+    .info-box div {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 14px 26px;
+        width: 100%;
+    }
+
+    /* ABOUT TEST */
+    .about-test h2 {
+        font-size: 22px;
+        padding: 0 10px;
+    }
+
+    .test-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .test-text h3 {
+        font-size: 20px;
+    }
+
+    .test-text p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .test-image img {
+        width: 220px;
+        height: auto;
+    }
+
+    /* FACT SECTION */
+    .facts h2 {
+        font-size: 22px;
+    }
+
+    .fact-card {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    #factText {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .fact-nav {
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .fact-link {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+    .footer h3 {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .footer-content > p {
+        font-size: 13px;
+    }
+
+    .footer-owner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .owner-box {
+        width: 100%;
+        padding: 15px;
+    }
 }
